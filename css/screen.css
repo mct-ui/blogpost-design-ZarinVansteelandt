@@ -50,6 +50,8 @@ html {
   //"Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
   color: #5C6366;
   padding: 48px 24px 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -90,6 +92,7 @@ h1, h2, h3 {
 }
 
 h1 {
+  font-family: 'Playfair Display', serif;
   font-size: 36px;
   font-weight: normal;
   line-height: 40px;
@@ -114,6 +117,11 @@ h6 {
   font-size: 16px;
   line-height: 24px;
   margin: 0 0 24px;
+}
+
+*+h2 {
+  /*iets dat gevolgd wordt door een h2 dan moeje dit toepassen*/
+  margin-top: 48px;
 }
 
 p,
@@ -198,6 +206,43 @@ a:focus {
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {}
+
+/*
+Components: author
+*/
+.c-author {
+  display: flex;
+  align-items: center;
+}
+
+.c-author__image {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%
+}
+
+.c-author__name, .c-author__meta {
+  margin-bottom: 0;
+}
+
+.c-author__meta {
+  font-size: 14px;
+  font-family: "Inter UI", "Helvetica Neue", Helvetica, arial, sans-serif;
+  line-height: 16px;
+  margin-top: 4px;
+}
+
+.c-author__name {
+  font-size: 16px;
+  line-height: 16px.
+}
+
+.c-author__image {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  margin-right: 16px;
+}
 
 /*
     Print styles.
